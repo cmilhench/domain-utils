@@ -1,0 +1,37 @@
+# OS (Mac OSX)
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Node JS
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+pids
+logs
+results
+tmp
+
+npm-debug.log
+node_modules
+
+# Textmate
+*.tmproj
+*.tmproject
+tmtags
+
+# Squirrel
+*.prod.js

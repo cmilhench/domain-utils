@@ -1,0 +1,22 @@
+#!/usr/bin/env node
+ 
+var utils  = require('..'), 
+    program = require('commander'), 
+    pkg = require('../package.json'), 
+    version = pkg.version;
+
+program
+  .version(version)
+  .option('-h, --host <host>', 'The host', utils.config.zoneedit.host)
+  .option('-a, --auth <auth>', 'The auth', utils.config.zoneedit.auth)
+  .parse(process.argv);
+
+utils.zoneedit.dynamic(program.host, program.auth, function(err, data){
+  if (err) {
+    console.log(err);
+  } else if (data.text) {
+    console.log(data.text);
+  } else {
+    console.log(data.raw);
+  }
+});
